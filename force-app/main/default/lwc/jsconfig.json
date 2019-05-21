@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/accountCreateOpportunity": [
+                "accountCreateOpportunity/accountCreateOpportunity.js"
+            ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],

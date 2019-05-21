@@ -6,6 +6,9 @@
             "c/accountCreateOpportunity": [
                 "accountCreateOpportunity/accountCreateOpportunity.js"
             ],
+            "c/accountCreateOpportunityv2": [
+                "accountCreateOpportunityv2/accountCreateOpportunityv2.js"
+            ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],

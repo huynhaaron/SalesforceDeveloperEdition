@@ -1,0 +1,60 @@
+<!-- <template>
+  <lightning-card title="Create Opportunity" icon-name="standard:record">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        label="Id"
+        disabled
+        data-id="recordId"
+        value={recordId}
+      ></lightning-input>
+      <lightning-input
+        label="Name"
+        class="slds-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        label="Amount"
+        class="slds-m-bottom_x-small"
+      ></lightning-input>
+      <lightning-input
+        type="date"
+        name="CloseDate"
+        label="Enter a date"
+      ></lightning-input>
+      <lightning-combobox
+        label="Stage"
+        name="Stage"
+        class="slds-m-bottom_x-small"
+        placeholder="--Select Stage--"
+        options={stageOptions}
+        onchange={handleStageChange}
+      >
+      </lightning-combobox>
+      <lightning-combobox
+        label="Type"
+        name="Type"
+        class="slds-m-bottom_x-small"
+        placeholder="--Select Type--"
+        options={typeOptions}
+        onchange={handleTypeChange}
+      ></lightning-combobox>
+      <lightning-button
+        label="Create Opportunity"
+        variant="brand"
+        onclick={createOpportunity}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template> -->
+<template>
+  <lightning-card title="Create Opportunity" icon-name="standard:record">
+    <div class="slds-m-around_medium">
+      <lightning-record-form
+        object-api-name={opportunityObject}
+        fields={myFields}
+        onsuccess={handleOpportunityCreated}
+      >
+      </lightning-record-form>
+    </div>
+    <span class="slds-m-around_small status">{createStatus}</span>
+  </lightning-card>
+</template>

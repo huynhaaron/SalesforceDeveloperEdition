@@ -1,3 +1,5 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from "lwc";
 
-export default class AccountCreateOpportunity extends LightningElement {}
+export default class AccountCreateOpportunity extends LightningElement {
+  @api recordId;
+}

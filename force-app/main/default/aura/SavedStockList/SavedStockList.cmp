@@ -1,0 +1,13 @@
+<aura:component controller="SavedStockController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="UserSavedStocks" type="SavedStock__c[]"/>
+    
+    <div class="slds-p-around_small">
+        <lightning:formattedText value="Your Saved Stocks"/>
+        <aura:iteration items="{!v.UserSavedStocks}" var="stock" indexVar="index">
+            <!--p>{!stock.Name}</p-->
+            <c:SavedStockListItem ticker="{!stock.Name}"/>
+        </aura:iteration>
+    </div>
+	
+</aura:component>

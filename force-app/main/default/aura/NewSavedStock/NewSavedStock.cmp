@@ -1,0 +1,26 @@
+<aura:component controller="SavedStockController" access="global" >
+    <!--aura:attribute name="fields" type="String[]" default="['Name']" /-->
+    <aura:attribute name="tickerName" type="String" default=""/>
+    <aura:attribute name="savedTickerName" type="String"/>
+
+    <aura:attribute name="recordCreated" type="Boolean" default="false"/>
+    <div class="slds-p-around_large">
+        <div class="slds-form-element">
+            <lightning:input type="String" value="{!v.tickerName}" aura:id="tickerSymbol" label="Save a Stock Symbol" />
+        </div>
+        <aura:if isTrue="{!notequals(v.tickerName, '')}">
+            <div class="slds-p-around_small">
+                <div class="slds-float_right">
+                    <lightning:button
+                                      variant="brand"
+                                      label="Save Stock Symbol"
+                                      onclick="{! c.handleClick }"/>
+                </div>
+            </div>	
+        </aura:if>
+        <br/>
+        <aura:if isTrue="{! v.recordCreated }">
+            <lightning:formattedText value="{! v.savedTickerName + ' has been saved.'}"/>
+        </aura:if>
+    </div>
+</aura:component>

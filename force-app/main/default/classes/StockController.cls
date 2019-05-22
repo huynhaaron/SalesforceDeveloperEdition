@@ -2,14 +2,13 @@ public class StockController {
     
     @AuraEnabled
     public static Map<String, Object> getStock(String tickerSymbol) {
-        String ticker = tickerSymbol.split(':')[1];
         Map<String, Object> results = new Map<String, Object>();
         
         apikey__c cs = apikey__c.getInstance('alphavantage');
 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + ticker + '&apikey=' + cs.key__c);
+        request.setEndpoint('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=' + tickerSymbol + '&apikey=' + cs.key__c);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         if (response.getStatusCode() == 200) {

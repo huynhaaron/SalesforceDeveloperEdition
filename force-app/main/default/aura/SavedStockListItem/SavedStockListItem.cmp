@@ -1,0 +1,25 @@
+<aura:component controller="StockController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="ticker" type="String"/>
+    <aura:attribute name="high" type="String"/>
+    <aura:attribute name="low" type="String"/>
+    <aura:attribute name="current" type="String"/>
+    
+    <div class="c-container">
+        <lightning:layout>
+            <lightning:layoutItem padding="around-small">
+                <p class="link" ><lightning:formattedText value="{! v.ticker }" onclick="{!c.goToSite}"/></p>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <p>H: <ui:outputCurrency format="$.00" value="{!v.high}"/></p>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <p>L: <ui:outputCurrency format="$.00" value="{!v.low}"/></p>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <p>C: <ui:outputCurrency format="$.00" value="{!v.current}"/></p>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    
+</aura:component>

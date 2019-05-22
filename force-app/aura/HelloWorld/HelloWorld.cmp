@@ -1,3 +1,0 @@
-<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
-	<p><lightning:formattedText linkify="true" value="I like salesforce.com and info.salesforce.com" /></p>
-</aura:component>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GymConfig</fullName>
+    <types>
+        <members>GymMember__c.Email__c</members>
+        <members>GymMember__c.Enrollment__c</members>
+        <members>GymMember__c.FirstName__c</members>
+        <members>GymMember__c.LastName__c</members>
+        <members>GymMember__c.MemberName__c</members>
+        <members>GymMember__c.PIN__c</members>
+        <members>GymMember__c.Phone__c</members>
+        <members>GymMember__c.isActive__c</members>
+        <members>GymMembership__c.ActiveMembership__c</members>
+        <members>GymMembership__c.EndDate__c</members>
+        <members>GymMembership__c.Enrollment__c</members>
+        <members>GymMembership__c.GymMember__c</members>
+        <members>GymMembership__c.StartDate__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>GymMember__c</members>
+        <members>GymMembership__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>GymMember__c-GymMember Layout</members>
+        <members>GymMembership__c-GymMembership Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>GymMember__c.All</members>
+        <members>GymMembership__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>GymMember__c.Pin_must_be_a_number</members>
+        <members>GymMembership__c.Start_Date_earlier_than_End_Date</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>45.0</version>
+</Package>

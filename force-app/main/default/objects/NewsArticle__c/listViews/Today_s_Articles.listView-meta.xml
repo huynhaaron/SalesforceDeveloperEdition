@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Today_s_Articles</fullName>
+    <columns>title__c</columns>
+    <columns>url__c</columns>
+    <columns>NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_N_DAYS:1</value>
+    </filters>
+    <label>Today&#39;s Articles</label>
+</ListView>

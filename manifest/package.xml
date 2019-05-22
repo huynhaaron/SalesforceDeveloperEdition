@@ -5,6 +5,11 @@
         <name>ApexClass</name>
     </types>
     <types>
+    <members>*</members>
+    <members>Account</members>
+    <name>CustomObject</name>
+</types>
+    <types>
         <members>*</members>
         <name>ApexComponent</name>
     </types>

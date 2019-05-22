@@ -40,27 +40,24 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>true</allowInChatterGroups>
+    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Standard gym member in the Gym App</description>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>true</enableHistory>
+    <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
+    <enableReports>false</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>GymMember</label>
+    <label>NewsArticle</label>
     <nameField>
-        <displayFormat>{YY}{000000}</displayFormat>
-        <label>GymMemberID</label>
-        <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <label>NewsArticle Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>GymMembers</pluralLabel>
+    <pluralLabel>NewsArticles</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

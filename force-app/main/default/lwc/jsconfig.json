@@ -9,6 +9,9 @@
             "c/accountCreateOpportunityv2": [
                 "accountCreateOpportunityv2/accountCreateOpportunityv2.js"
             ],
+            "c/lightningAccountMap": [
+                "lightningAccountMap/lightningAccountMap.js"
+            ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],

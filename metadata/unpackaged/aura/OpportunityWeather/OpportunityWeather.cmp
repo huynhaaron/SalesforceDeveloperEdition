@@ -1,0 +1,30 @@
+<aura:component controller="WeatherController" implements="flexipage:availableForAllPageTypes,force:appHostable,force:hasRecordId" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="weather" type="map"/>
+    
+    
+    <lightning:card footer="Weather provided by OpenWeatherAPI">
+        <aura:set attribute="title">
+            <lightning:icon iconName="custom:custom3" size="small"/>
+            Opportunity Weather Widget
+        </aura:set>
+        <aura:if isTrue="{!not(empty(v.weather))}">
+            <p class="slds-p-horizontal_small">
+                Your opportunity is located in {!v.weather.name}.
+            </p>
+            <p class="slds-p-horizontal_small">
+                The weather right now is {!v.weather.main.temp} F.
+            </p>
+            <p class="slds-p-horizontal_small">
+                Outside looks like {!v.weather.weather[0].description}.
+            </p>
+            <aura:set attribute="else">
+                <p class="slds-p-horizontal_small">
+                    Today is a good day
+                </p>
+            </aura:set>
+        </aura:if>
+
+    </lightning:card>
+</aura:component>

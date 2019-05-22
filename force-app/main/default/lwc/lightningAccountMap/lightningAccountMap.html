@@ -1,0 +1,13 @@
+<template>
+  <lightning-card>
+    <lightning-map
+      map-markers={markers}
+      center={center}
+      zoom-level={zoomLevel}
+      markers-title="Locations of Accounts in California"
+    ></lightning-map>
+    <template if:true={error}>
+      <p>{error} - NO MARKERS</p>
+    </template>
+  </lightning-card>
+</template>

@@ -12,6 +12,9 @@
             "c/lightningAccountMap": [
                 "lightningAccountMap/lightningAccountMap.js"
             ],
+            "c/lightningChart": [
+                "lightningChart/lightningChart.js"
+            ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],

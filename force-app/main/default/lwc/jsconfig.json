@@ -20,21 +20,6 @@
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
-            ],
-            "c/duration": [
-                "../staticresources/moment/moment-develop/src/lib/duration/duration.js"
-            ],
-            "c/format": [
-                "../staticresources/moment/moment-develop/src/lib/format/format.js"
-            ],
-            "c/locale": [
-                "../staticresources/moment/moment-develop/src/lib/locale/locale.js"
-            ],
-            "c/moment": [
-                "../staticresources/moment/moment-develop/src/lib/moment/moment.js"
-            ],
-            "c/units": [
-                "../staticresources/moment/moment-develop/src/lib/units/units.js"
             ]
         }
     },

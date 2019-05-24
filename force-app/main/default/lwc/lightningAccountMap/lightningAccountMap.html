@@ -6,6 +6,13 @@
       zoom-level={zoomLevel}
       markers-title="Some Accounts in California"
     ></lightning-map>
+    <lightning-slider
+      label="Zoom Level"
+      min="1"
+      max="15"
+      value={zoomLevel}
+      onchange={handleZoom}
+    ></lightning-slider>
     <template if:true={error}>
       <p>{error} - NO MARKERS</p>
     </template>

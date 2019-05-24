@@ -2,6 +2,7 @@ import { LightningElement, track, wire } from "lwc";
 import getAccounts from "@salesforce/apex/MapAccountController.getAccounts";
 
 export default class LightningAccountMap extends LightningElement {
+  @track zoomLevel = 8;
   @track markers = [
     {
       location: {
@@ -66,6 +67,8 @@ export default class LightningAccountMap extends LightningElement {
       City: "Lompoc"
     }
   };
-  //zoom level
-  zoomLevel = 8;
+
+  handleZoom(event) {
+    this.zoomLevel = event.target.value;
+  }
 }

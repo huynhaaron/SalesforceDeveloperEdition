@@ -1,6 +1,6 @@
 public class GetNewsArticles implements Schedulable {
     public void execute(SchedulableContext ctx) {
-        GetNewsArticles.trimNews();
+        GetNewsHelper.trimNews();
         GetNewsHelper.getNews();
     }
 }

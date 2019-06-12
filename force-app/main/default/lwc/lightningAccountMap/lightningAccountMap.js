@@ -1,9 +1,10 @@
 import { LightningElement, track, wire } from "lwc";
 import getAccounts from "@salesforce/apex/MapAccountController.getAccounts";
+const DELAY = 300;
 
 export default class LightningAccountMap extends LightningElement {
   @track zoomLevel = 8;
-  @track state = "CA";
+  @track state = "";
   @track markers = [
     {
       location: {
@@ -37,7 +38,7 @@ export default class LightningAccountMap extends LightningElement {
   ];
   @track error;
 
-  @wire(getAccounts)
+  @wire(getAccounts, { state: "$state" })
   wiredmarkers({ error, data }) {
     //console.log("markers");
     //debugger;
@@ -72,5 +73,13 @@ export default class LightningAccountMap extends LightningElement {
   handleZoom(event) {
     this.zoomLevel = event.target.value;
   }
-  handleState() {}
+
+  handleStateChange(event) {
+    window.clearTimeout(this.delayTimeout);
+    const state = event.target.value;
+    // eslint-disable-next-line @lwc/lwc/no-async-operation
+    this.delayTimeout = setTimeout(() => {
+      this.state = state;
+    }, DELAY);
+  }
 }

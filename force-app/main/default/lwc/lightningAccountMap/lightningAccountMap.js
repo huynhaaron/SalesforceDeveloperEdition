@@ -72,4 +72,5 @@ export default class LightningAccountMap extends LightningElement {
   handleZoom(event) {
     this.zoomLevel = event.target.value;
   }
+  handleState() {}
 }

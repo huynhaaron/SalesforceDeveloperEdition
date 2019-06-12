@@ -1,18 +1,31 @@
 <template>
-  <lightning-card>
-    <lightning-map
-      map-markers={markers}
-      center={center}
-      zoom-level={zoomLevel}
-      markers-title="Some Accounts in California"
-    ></lightning-map>
-    <lightning-slider
-      label="Zoom Level"
-      min="1"
-      max="15"
-      value={zoomLevel}
-      onchange={handleZoom}
-    ></lightning-slider>
+  <lightning-card
+    title="Locations of Accounts in a State"
+    icon-name="standard:location"
+  >
+    <div class="slds-p-around_small">
+      <div class="slds-box slds-grid slds-wrap">
+        <div class="slds-size_1-of-2 slds-p-around_x-small">
+          <lightning-slider
+            label="Zoom Level"
+            min="1"
+            max="15"
+            value={zoomLevel}
+            onchange={handleZoom}
+          ></lightning-slider>
+        </div>
+        <div class="slds-size_1-of-2 slds-p-around_x-small">
+          <lightning-input label="State" value={state}></lightning-input>
+        </div>
+      </div>
+      <lightning-map
+        class="slds-m-around_medium"
+        map-markers={markers}
+        center={center}
+        zoom-level={zoomLevel}
+        markers-title="Account Map"
+      ></lightning-map>
+    </div>
     <template if:true={error}>
       <p>{error} - NO MARKERS</p>
     </template>

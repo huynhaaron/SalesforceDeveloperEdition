@@ -3,6 +3,7 @@ import getAccounts from "@salesforce/apex/MapAccountController.getAccounts";
 
 export default class LightningAccountMap extends LightningElement {
   @track zoomLevel = 8;
+  @track state = "CA";
   @track markers = [
     {
       location: {

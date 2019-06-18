@@ -8,7 +8,7 @@ public with sharing class AccountReferralController {
             !Schema.sObjectType.Account.fields.Number_of_Referrals__c.isAccessible()) {
                 return accounts;
         }
-        accounts = [SELECT Name, Number_of_Referrals__c FROM Account WHERE Number_of_Referrals__c >= 1 ORDER BY Number_of_Referrals__c LIMIT :n ];
+        accounts = [SELECT Name, Number_of_Referrals__c FROM Account WHERE Number_of_Referrals__c >= 1 ORDER BY Number_of_Referrals__c DESC LIMIT :n ];
         return accounts;
     }
 }

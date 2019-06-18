@@ -1,4 +1,4 @@
-import { LightningElement } from "lwc";
+import { LightningElement, wire } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 import Chart from "@salesforce/resourceUrl/Chart";
@@ -33,6 +33,44 @@ export default class LightningTopAccountReferrals extends LightningElement {
         );
       });
   }
+  @wire(getTopAccountReferrals, { n: 5 })
+  wiredAccounts({ error, data }) {
+    if (error) {
+      window.console.log(error);
+    }
+    if (data) {
+      let labels = [];
+      let numReferrals = [];
+      data.forEach(item => {
+        window.console.log(item);
+        labels.push(item.Name);
+        numReferrals.push(item.Number_of_Referrals__c);
+      });
+      window.console.log(labels);
+      window.console.log(numReferrals);
+      this.initializeChart(labels, numReferrals);
+    }
+  }
 
-  initializeChart() {}
+  initializeChart(labels, numReferrals) {
+    var ctx = this.template.querySelector("canvas.myChart").getContext("2d");
+    this.chart = new window.Chart(ctx, {
+      type: "horizontalBar",
+      data: {
+        labels: labels,
+        datasets: [{ label: "Top Referrals", data: numReferrals }]
+      },
+      options: {
+        scales: {
+          xAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
+      }
+    });
+  }
 }

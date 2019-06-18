@@ -42,12 +42,9 @@ export default class LightningTopAccountReferrals extends LightningElement {
       let labels = [];
       let numReferrals = [];
       data.forEach(item => {
-        window.console.log(item);
         labels.push(item.Name);
         numReferrals.push(item.Number_of_Referrals__c);
       });
-      window.console.log(labels);
-      window.console.log(numReferrals);
       this.initializeChart(labels, numReferrals);
     }
   }
@@ -58,9 +55,33 @@ export default class LightningTopAccountReferrals extends LightningElement {
       type: "horizontalBar",
       data: {
         labels: labels,
-        datasets: [{ label: "Top Referrals", data: numReferrals }]
+        datasets: [
+          {
+            label: "Top Referrals",
+            data: numReferrals,
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)"
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)"
+            ]
+          }
+        ]
       },
       options: {
+        legend: {
+          display: false
+        },
         scales: {
           xAxes: [
             {

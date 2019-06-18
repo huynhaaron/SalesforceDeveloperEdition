@@ -7,6 +7,9 @@
             ],
             "c/lightningChart": [
                 "lightningChart/lightningChart.js"
+            ],
+            "c/lightningTopAccountReferrals": [
+                "lightningTopAccountReferrals/lightningTopAccountReferrals.js"
             ]
         },
         "experimentalDecorators": true

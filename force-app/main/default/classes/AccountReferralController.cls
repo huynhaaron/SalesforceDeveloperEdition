@@ -1,7 +1,7 @@
 public with sharing class AccountReferralController {
 
     @AuraEnabled(cacheable=true)
-    public static List<Account> topAccountReferrals(Integer n) {
+    public static List<Account> getTopAccountReferrals(Integer n) {
         List<Account> accounts = new List<Account>();
         if (!Schema.sObjectType.Account.isAccessible() &&
             !Schema.sObjectType.Account.fields.Name.isAccessible() &&
@@ -9,9 +9,8 @@ public with sharing class AccountReferralController {
                 return accounts;
         }
         accounts = [SELECT Name, Number_of_Referrals__c FROM Account WHERE Number_of_Referrals__c >= 1 ORDER BY Number_of_Referrals__c LIMIT :n ];
-        system.debug(accounts);
         return accounts;
     }
 }
 
-//AccountReferralController.topAccountReferrals(5);
+//AccountReferralController.getTopAccountReferrals(5);

@@ -99,6 +99,7 @@
 		<members>RecordAction</members>
 		<members>RedditPost__c</members>
 		<members>SavedStock__c</members>
+		<members>SavedLink__c</members>
 		<members>Scorecard</members>
 		<members>ScorecardAssociation</members>
 		<members>ScorecardMetric</members>

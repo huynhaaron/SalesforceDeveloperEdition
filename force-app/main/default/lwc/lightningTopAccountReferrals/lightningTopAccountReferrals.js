@@ -1,7 +1,7 @@
 import { LightningElement, wire } from "lwc";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
-import Chart from "@salesforce/resourceUrl/Chart";
+import Chart from "@salesforce/resourceUrl/chart";
 import { loadScript, loadStyle } from "lightning/platformResourceLoader";
 import getTopAccountReferrals from "@salesforce/apex/AccountReferralController.getTopAccountReferrals";
 
@@ -42,9 +42,12 @@ export default class LightningTopAccountReferrals extends LightningElement {
       let labels = [];
       let numReferrals = [];
       data.forEach(item => {
+        window.console.log(item);
         labels.push(item.Name);
         numReferrals.push(item.Number_of_Referrals__c);
       });
+      window.console.log(labels);
+      window.console.log(numReferrals);
       this.initializeChart(labels, numReferrals);
     }
   }
@@ -93,5 +96,14 @@ export default class LightningTopAccountReferrals extends LightningElement {
         }
       }
     });
+    ctx.onclick = function(evt) {
+      var activePoint = this.chart.getElementAtEvent(evt)[0];
+      var data = activePoint._chart.data;
+      //var datasetIndex = activePoint._datasetIndex;
+      //var l = data.datasets[datasetIndex].label;
+      //var v = data.datasets[datasetIndex].data[activePoint._index];
+      window.console.log("clicked");
+      window.console.log(data);
+    };
   }
 }

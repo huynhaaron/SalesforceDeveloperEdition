@@ -11,6 +11,12 @@
             "c/lightningSavedLinks": [
                 "lightningSavedLinks/lightningSavedLinks.js"
             ],
+            "c/lightningSavedLinksList": [
+                "lightningSavedLinksList/lightningSavedLinksList.js"
+            ],
+            "c/lightningSavedLinksListItem": [
+                "lightningSavedLinksListItem/lightningSavedLinksListItem.js"
+            ],
             "c/lightningTopAccountReferrals": [
                 "lightningTopAccountReferrals/lightningTopAccountReferrals.js"
             ]

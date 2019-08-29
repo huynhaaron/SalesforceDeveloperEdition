@@ -1,6 +1,6 @@
 public with sharing class AccountReferralController {
 
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled
     public static List<Account> getTopAccountReferrals(Integer n) {
         List<Account> accounts = new List<Account>();
         if (!Schema.sObjectType.Account.isAccessible() &&

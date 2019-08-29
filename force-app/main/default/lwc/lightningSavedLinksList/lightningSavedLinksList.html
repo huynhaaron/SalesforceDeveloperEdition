@@ -1,0 +1,15 @@
+<template>
+  <div>In SavedLinkLists</div>
+  <div class="slds-m-around_medium">
+    <template if:true={savedLinks.data}>
+      <template for:each={savedLinks.data} for:item="link">
+        <c-lightning-saved-links-list-item
+          key={link.Position__c}
+          title={link.Title__c}
+          position={link.Position__c}
+          url={link.URL__c}
+        ></c-lightning-saved-links-list-item>
+      </template>
+    </template>
+  </div>
+</template>

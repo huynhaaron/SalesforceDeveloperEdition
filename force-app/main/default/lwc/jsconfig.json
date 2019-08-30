@@ -11,6 +11,9 @@
             "c/lightningSavedLinks": [
                 "lightningSavedLinks/lightningSavedLinks.js"
             ],
+            "c/lightningSavedLinksForm": [
+                "lightningSavedLinksForm/lightningSavedLinksForm.js"
+            ],
             "c/lightningSavedLinksList": [
                 "lightningSavedLinksList/lightningSavedLinksList.js"
             ],
@@ -19,9 +22,6 @@
             ],
             "c/lightningTopAccountReferrals": [
                 "lightningTopAccountReferrals/lightningTopAccountReferrals.js"
-            ],
-            "c/lightningSavedLinksForm": [
-                "lightningSavedLinksForm/lightningSavedLinksForm.js"
             ]
         },
         "experimentalDecorators": true

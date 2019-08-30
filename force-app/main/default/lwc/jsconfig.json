@@ -19,6 +19,9 @@
             ],
             "c/lightningTopAccountReferrals": [
                 "lightningTopAccountReferrals/lightningTopAccountReferrals.js"
+            ],
+            "c/lightningSavedLinksForm": [
+                "lightningSavedLinksForm/lightningSavedLinksForm.js"
             ]
         },
         "experimentalDecorators": true

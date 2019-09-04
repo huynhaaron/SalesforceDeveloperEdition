@@ -2,6 +2,7 @@
   <div>In SavedLinkLists</div>
   <div class="slds-m-around_medium">
     <template if:true={savedLinks.data}>
+      {positionCount}
       <template for:each={savedLinks.data} for:item="link">
         <c-lightning-saved-links-list-item
           key={link.Position__c}

@@ -15,6 +15,7 @@
 		<members>WeatherController</members>
 		<members>weatherWrapper</members>
 		<members>weatherWrapperClass</members>
+		<members>TriggerHandler</members>
 		<name>ApexClass</name>
 	</types>
 	<types>

@@ -99,9 +99,9 @@ export default class LightningTopAccountReferrals extends LightningElement {
     ctx.onclick = function(evt) {
       var activePoint = this.chart.getElementAtEvent(evt)[0];
       var data = activePoint._chart.data;
-      //var datasetIndex = activePoint._datasetIndex;
-      //var l = data.datasets[datasetIndex].label;
-      //var v = data.datasets[datasetIndex].data[activePoint._index];
+      var datasetIndex = activePoint._datasetIndex;
+      var l = data.datasets[datasetIndex].label;
+      var v = data.datasets[datasetIndex].data[activePoint._index];
       window.console.log("clicked");
       window.console.log(data);
     };

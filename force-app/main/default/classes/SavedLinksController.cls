@@ -20,4 +20,12 @@ public with sharing class SavedLinksController {
         }
         return newLink;
     }
+    @AuraEnabled
+    public static string deleteSavedLink(String linkId){
+        SavedLink__c toDeleteLink = [SELECT Id FROM SavedLink__c WHERE Id =: linkId LIMIT 1];
+        if (Schema.sObjectType.SavedLink__c.isDeletable()) {
+            delete toDeleteLink;
+        }
+        return toDeleteLink.Id;
+    }
 }

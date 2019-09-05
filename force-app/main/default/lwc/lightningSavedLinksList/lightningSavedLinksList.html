@@ -1,18 +1,18 @@
 <template>
-  <div>In SavedLinkLists</div>
-  <div class="slds-m-around_medium">
+  <div oncreated={handleCreated} class="slds-m-around_medium">
     <template if:true={savedLinks.data}>
-      {positionCount}
       <template for:each={savedLinks.data} for:item="link">
+        {positionCount}
         <c-lightning-saved-links-list-item
           key={link.Id}
           title={link.Title__c}
           position={link.Position__c}
           url={link.URL__c}
           id={link.Id}
-          ondeleted={linkDeleted}
+          ondeleted={handleDeleted}
         ></c-lightning-saved-links-list-item>
       </template>
     </template>
+    <c-lightning-saved-links-form></c-lightning-saved-links-form>
   </div>
 </template>

@@ -4,7 +4,7 @@ import deleteSavedLink from "@salesforce/apex/SavedLinksController.deleteSavedLi
 
 export default class LightningSavedLinksListItem extends LightningElement {
   @api id;
-  @api title;
+  @api editing;
   @api url;
   @api position;
 

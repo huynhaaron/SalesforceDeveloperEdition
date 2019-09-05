@@ -1,11 +1,24 @@
 <template>
   <div class="slds-m-around_medium">
+    <div class="slds-float_right">
+      <lightning-button-stateful
+        label-when-off="Edit Links: edit = false"
+        label-when-on="Editing Links: edit = true"
+        icon-name-when-off=""
+        icon-name-when-on="utility:edit"
+        selected={isEditing}
+        onclick={handleEditing}
+      >
+      </lightning-button-stateful>
+    </div>
     <template if:true={savedLinks.data}>
       <template for:each={savedLinks.data} for:item="link">
         {positionCount}
         <c-lightning-saved-links-list-item
+          class="slds-item"
           key={link.Id}
           title={link.Title__c}
+          editing={isEditing}
           position={link.Position__c}
           url={link.URL__c}
           id={link.Id}

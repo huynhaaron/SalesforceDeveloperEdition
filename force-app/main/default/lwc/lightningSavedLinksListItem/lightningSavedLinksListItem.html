@@ -1,20 +1,22 @@
 <template>
-  <div id={id}>
+  <div>
     <p>
       {position}:
       <lightning-formatted-url
         value={url}
         label={title}
       ></lightning-formatted-url>
-      <lightning-button-icon
-        id={id}
-        value={id}
-        icon-name="utility:delete"
-        alternative-text="Delete"
-        class="slds-m-left_xx-small"
-        onclick={handleDelete}
-      >
-      </lightning-button-icon>
+      <template if:true={editing}>
+        <lightning-button-icon
+          id={id}
+          value={id}
+          icon-name="utility:delete"
+          alternative-text="Delete"
+          class="slds-m-left_xx-small"
+          onclick={handleDelete}
+        >
+        </lightning-button-icon>
+      </template>
     </p>
     <p>------</p>
   </div>

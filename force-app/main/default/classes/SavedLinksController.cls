@@ -16,7 +16,6 @@ public with sharing class SavedLinksController {
             newLink.Title__c = title;
             newLink.URL__c = url;
             newLink.OwnerId = UserInfo.getUserId();
-            newLink.Position__c = countOfSavedLinks + 1;
             insert newLink;
         }
         return newLink;

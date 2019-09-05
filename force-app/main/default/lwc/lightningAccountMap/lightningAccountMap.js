@@ -77,6 +77,7 @@ export default class LightningAccountMap extends LightningElement {
   handleStateChange(event) {
     window.clearTimeout(this.delayTimeout);
     const state = event.target.value;
+    // eslint-disable-next-line @lwc/lwc/no-async-operation
     this.delayTimeout = setTimeout(() => {
       this.state = state;
     }, DELAY);

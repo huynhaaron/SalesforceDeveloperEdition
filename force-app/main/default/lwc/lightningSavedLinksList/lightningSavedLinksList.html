@@ -5,10 +5,12 @@
       {positionCount}
       <template for:each={savedLinks.data} for:item="link">
         <c-lightning-saved-links-list-item
-          key={link.Position__c}
+          key={link.Id}
           title={link.Title__c}
           position={link.Position__c}
           url={link.URL__c}
+          id={link.Id}
+          ondeleted={linkDeleted}
         ></c-lightning-saved-links-list-item>
       </template>
     </template>

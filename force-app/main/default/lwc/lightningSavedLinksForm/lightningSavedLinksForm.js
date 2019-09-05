@@ -21,5 +21,11 @@ export default class LightningSavedLinksForm extends LightningElement {
       variant: "success"
     });
     this.dispatchEvent(evt);
+    const inputFields = this.template.querySelectorAll("lightning-input-field");
+    if (inputFields) {
+      inputFields.forEach(field => {
+        field.reset();
+      });
+    }
   }
 }
